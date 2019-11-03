@@ -9,6 +9,11 @@ public class Main {
         while(in.hasNext())
         {
             String str = (String)in.next();
+            if(str.startsWith("//"))
+            {
+                str = in.nextLine();
+                continue;
+            }
             ip.go(str);
         }
     }
